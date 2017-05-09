@@ -1,0 +1,38 @@
+{
+  "name": "monikai",
+  "version": "1.0.0",
+  "description": "Monikai package.json",
+  "main": "test.js",
+  "scripts": {
+    "start": "node test.js",
+    "test": "mocha --recursive ./test"
+  },
+  "keywords": [
+    "daft",
+    "punk",
+    "harder",
+    "better",
+    "faster",
+    "stronger"
+  ],
+  "author": "Manithou",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "latest",
+    "angular-bootstrap": "0.10.0",
+    "angular-cookies": "latest",
+    "angular-mocks": "latest",
+    "angular-resource": "latest",
+    "angular-route": "latest",
+    "angular-ui-router": "#master",
+    "bootstrap": "latest",
+    "karma": "^1.6.0",
+    "mocha": "^3.3.0"
+  },
+  "devDependencies": {
+    "karma": "^1.6.0",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4"
+  }
+}

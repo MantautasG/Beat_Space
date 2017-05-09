@@ -1,0 +1,32 @@
+<!-- <div id="main-navbar" ng-controller="NavController"> -->
+<nav id="navbar" class="navbar navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../ang/#!/main"><img class="logo" src="../ang/app-content/images/logo.png" alt="Beat Space logo"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="main_hover"><a href="../ang/#!/main"><img class="icons" ng-src="../ang/app-content/images/home.png" alt="Home"> Home</a></li>
+      <li class="main_hover"><a href="../ang/#!/search"><img class="icons" ng-src="../ang/app-content/images/search.png" alt="search"> Search</a></li>
+      <li class="main_hover"><a href="../ang/#!/song_choice"><img class="icons" ng-src="../ang/app-content/images/discover.png" alt="discover">Add song</a></li>
+      <li class="main_hover"><a href="../ang/#!/playlist"><img class="icons" ng-src="../ang/app-content/images/my_space.png" alt="my-space"> My space</a></li>         
+    </ul>
+    <div> <input id="SearchInput" type="text" name="Search" onchange="GoToSearchView() "> </div>
+    <div class="pull-right" id="navbar-login"><a href="../ang/#!/login"><img class="login main_hover" src="../ang/app-content/images/login.png" alt="Login"></a></div>
+    <div class="pull-right" id="navbar-logout"><a href="../ang/#!/login"><!-- <img class="login main_hover" src="../ang/app-content/images/login.png" alt="Login"> --><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></div>
+    <div class="pull-right" id="hello-user">Hello, {{ User.currentUser.username }}</div>
+    <!--/.nav-collapse -->
+  </div>
+  <!--/.container-fluid -->
+</nav>
+<!-- </div> -->
+<script type="text/javascript">
+  
+function GoToSearchView()
+{
+  debugger;
+  var input = document.getElementById("SearchInput").value;
+  document.getElementById("SearchInput").value = null;
+  angular.element('*[ng-app]').injector().get("UniversalService").Search(input);
+}
+
+</script>

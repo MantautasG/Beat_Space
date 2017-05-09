@@ -1,0 +1,166 @@
+/*ul.all-songs {
+    padding: 0;
+    list-style: none;
+    .song {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 10px;
+        .song-title {
+            font-size: 16px;
+            background: white;
+            border-radius: 5px;
+            padding: 5px;
+            &:hover {
+                background-color: #eee;
+            }
+        }
+    } 
+}*/
+
+.full-width-expanded-video {
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    right: 0!important;
+}
+
+.full-width-expanded-video iframe {
+    margin: 0px!important;
+    width: 100%;
+    height: 100%;
+}
+
+#playing-music {
+    display: none; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: white;
+    font-size: 20px;
+    padding: 5px 0px;
+}
+
+#playing-music iframe {
+    margin: 0px 5px;
+}
+
+#bottom_player {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    font-size: 20px;
+    padding: 5px 0px;
+    display: none;
+}
+
+#bottom_player i {
+	padding-right: 10px;
+}
+
+#bottom_player a#compressButton, #bottom_player a#fullExpandButton, #bottom_player a#fullCompressButton {
+    display: none;
+}
+
+#bottom_player a {
+    display: inline-block;
+    color: $medium;
+}
+
+#bottom_player a:hover, #bottom_player i:hover {
+    color: $lite;
+}
+
+/*ul.all-songs li:nth-child(4n+1) .song {
+    clear: left;
+}*/
+
+#GlobalPlayer {
+    margin-bottom: 40px;
+}
+
+div#add-to-playlist, .song-name {
+    display: inline-block;
+}
+
+#time {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    span {
+        float: left;
+        width: initial;
+        width: 55px;
+    }
+    input {
+        float: left;
+        width: 500px;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+}
+
+select#select-add-to-playlist {
+    display: none;
+    position: absolute;
+    bottom: 38px;
+}
+
+/*#progressBar {
+width: 960px;
+height: 6px;
+background-color: #444444;
+margin-top: 1px;
+}
+
+#progressBar div {
+height: 100%;
+width: 0;
+background-color: #ffffff;
+}*/
+
+#progress-bar-div {
+    /*Chrome*/
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        input[type='range'] {
+          overflow: hidden;
+          width: 100%;
+          -webkit-appearance: none;
+          background-color: #f5f5f5;
+          cursor: pointer;
+        }
+        
+        input[type='range']::-webkit-slider-runnable-track {
+          height: 10px;
+          -webkit-appearance: none;
+          color: #13bba4;
+          margin-top: -1px;
+        }
+        
+        input[type='range']::-webkit-slider-thumb {
+          width: 10px;
+          -webkit-appearance: none;
+          height: 10px;
+          cursor: pointer;
+          background: #434343;
+          box-shadow: -9999px 0 0 9999px #008CBA;
+        }
+
+    }
+    /** FF*/
+    input[type="range"]::-moz-range-progress {
+      background-color: #008CBA; 
+    }
+    input[type="range"]::-moz-range-track {  
+      background-color: #f5f5f5;
+    }
+    /* IE*/
+    input[type="range"]::-ms-fill-lower {
+      background-color: #008CBA;
+      display: block;
+    }
+    input[type="range"]::-ms-fill-upper {  
+      background-color: #f5f5f5;
+    }
+}
